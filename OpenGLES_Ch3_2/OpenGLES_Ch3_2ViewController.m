@@ -13,6 +13,8 @@
 @synthesize baseEffect;
 @synthesize quadEffect;
 @synthesize textEffect;
+@synthesize switchEffect;
+
 
 @synthesize vertexBuffer;
 @synthesize quadVertexArray;
@@ -100,6 +102,18 @@ GLfloat quadVertices[12] =
                                                    1.0f, // Blue
                                                    1.0f);// Alpha
     
+    // Create a base effect that provides standard OpenGL ES 2.0
+    // shading language programs and set constants to be used for
+    // all subsequent rendering
+    self.switchEffect = [[GLKBaseEffect alloc] init];
+    self.switchEffect.useConstantColor = GL_TRUE;
+    self.switchEffect.constantColor = GLKVector4Make(
+                                                     1.0f, // Red
+                                                     0.0f, // Green
+                                                     1.0f, // Blue
+                                                     0.0f);// Alpha
+    
+    
     // Set the background color stored in the current context
     ((AGLKContext *)view.context).clearColor = GLKVector4Make(
                                                               1.0f, // Red
@@ -179,11 +193,62 @@ GLfloat quadVertices[12] =
                                          modelviewMatrix);
     self.baseEffect.transform.modelviewMatrix = modelviewMatrix;
     
+    if(self.timeSinceFirstResume > 9) {
+        float alpha = self.timeSinceFirstResume - 9.0f;
+        alpha *= 0.8f;
+        
+        if(alpha >= 1) {
+            alpha = 1.0f;
+        }
+        
+        self.baseEffect.constantColor = GLKVector4Make(
+                                                       1.0f, // Red
+                                                       1.0f, // Green
+                                                       1.0f, // Blue
+                                                       1.0f - alpha);// Alpha
+    }
+    
+    
+    float moving = -6.0f + self.timeSinceFirstResume * 1.5;
+    
+    if(moving >= 0) {
+        moving = 0.0f;
+    }
+
+    
     // Draw triangles using the first three vertices in the
     // currently bound vertex buffer
     [self.vertexBuffer drawArrayWithMode:GL_TRIANGLE_STRIP
                         startVertexIndex:0
                         numberOfVertices:4];
+    
+    self.switchEffect.transform.modelviewMatrix = modelviewMatrix;
+    
+    
+    if(moving == 0.0f && self.timeSinceFirstResume > 10) {
+        float alpha = self.timeSinceFirstResume - 10.0f;
+        
+        alpha *= 0.8f;
+        
+        if(alpha >= 1) {
+            alpha = 1.0f;
+        }
+        
+        self.switchEffect.constantColor = GLKVector4Make(
+                                                         1.0f, // Red
+                                                         0.0f, // Green
+                                                         1.0f, // Blue
+                                                         alpha);// Alpha
+        [self.switchEffect prepareToDraw];
+        
+        [self.vertexBuffer drawArrayWithMode:GL_TRIANGLE_STRIP
+                            startVertexIndex:0
+                            numberOfVertices:4];
+
+    }
+
+    
+    
     
     
     [self.quadEffect prepareToDraw];
@@ -193,10 +258,19 @@ GLfloat quadVertices[12] =
                        attribOffset:0
                        shouldEnable:YES];
     
-    float moving = -6.0f + self.timeSinceFirstResume * 1.5;
-    
-    if(moving >= 0) {
-        moving = 0;
+    if(self.timeSinceFirstResume > 12) {
+        float alpha = self.timeSinceFirstResume - 12.0f;
+        alpha *= 0.4f;
+        
+        if(alpha >= 0.2) {
+            alpha = 0.2f;
+        }
+        
+        self.quadEffect.constantColor = GLKVector4Make(
+                                                       0.0f, // Red
+                                                       0.0f, // Green
+                                                       0.0f, // Blue
+                                                       0.2f - alpha);// Alpha
     }
     
     modelviewMatrix =
@@ -210,7 +284,6 @@ GLfloat quadVertices[12] =
     [self.quadVertexArray drawArrayWithMode:GL_TRIANGLE_STRIP
                           startVertexIndex:0
                           numberOfVertices:4];
-    
     
     [self.textEffect prepareToDraw];
     

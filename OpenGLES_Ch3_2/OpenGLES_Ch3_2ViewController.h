@@ -18,6 +18,8 @@
 *quadEffect;
 @property (strong, nonatomic) GLKBaseEffect
 *textEffect;
+@property (strong, nonatomic) GLKBaseEffect
+*switchEffect;
 
 @property (strong, nonatomic) AGLKVertexAttribArrayBuffer
 *vertexBuffer;
