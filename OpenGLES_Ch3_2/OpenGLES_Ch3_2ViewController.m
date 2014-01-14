@@ -12,6 +12,7 @@
 
 @synthesize baseEffect;
 @synthesize quadEffect;
+@synthesize textEffect;
 
 @synthesize vertexBuffer;
 @synthesize quadVertexArray;
@@ -37,10 +38,10 @@ static const SceneVertex vertices[] =
 
 GLfloat quadVertices[12] =
 {
-    -1.0f, -0.5f, -0.1f,
-    0.5f, -0.5f, -0.1f,
-    -1.0f, 0.5f, -0.1f,
-    0.5f, 0.5f, -0.1f
+    -1.0f, -0.4f, -0.1f,
+    0.5f, -0.4f, -0.1f,
+    -1.0f, 0.4f, -0.1f,
+    0.5f, 0.4f, -0.1f
 };
 
 
@@ -87,6 +88,18 @@ GLfloat quadVertices[12] =
                                                    0.0f, // Blue
                                                    0.2f);// Alpha
     
+    
+    // Create a base effect that provides standard OpenGL ES 2.0
+    // shading language programs and set constants to be used for
+    // all subsequent rendering
+    self.textEffect = [[GLKBaseEffect alloc] init];
+    self.textEffect.useConstantColor = GL_TRUE;
+    self.textEffect.constantColor = GLKVector4Make(
+                                                   1.0f, // Red
+                                                   1.0f, // Green
+                                                   1.0f, // Blue
+                                                   1.0f);// Alpha
+    
     // Set the background color stored in the current context
     ((AGLKContext *)view.context).clearColor = GLKVector4Make(
                                                               1.0f, // Red
@@ -120,6 +133,18 @@ GLfloat quadVertices[12] =
     self.baseEffect.texture2d0.name = textureInfo.name;
     self.baseEffect.texture2d0.target = textureInfo.target;
     
+    // Setup texture
+    imageRef =
+    [[UIImage imageNamed:@"image.png"] CGImage];
+    
+    textureInfo = [AGLKTextureLoader
+                                    textureWithCGImage:imageRef
+                                    options:nil
+                                    error:NULL];
+    
+    self.textEffect.texture2d0.name = textureInfo.name;
+    self.textEffect.texture2d0.target = textureInfo.target;
+    
     glEnable(GL_BLEND);
     glBlendFunc( GL_ONE, GL_ONE_MINUS_SRC_ALPHA );
 }
@@ -150,7 +175,7 @@ GLfloat quadVertices[12] =
     GLKMatrix4 modelviewMatrix =
     GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0.0f, 0.0f, 0),
                        GLKMatrix4MakeRotation(0.0f, 0, 0, 1));
-    modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeScale(2 + self.timeSinceFirstResume * 0.01, 2 + self.timeSinceFirstResume * 0.01, 1),
+    modelviewMatrix = GLKMatrix4Multiply(GLKMatrix4MakeScale(2 + self.timeSinceFirstResume * 0.02, 2 + self.timeSinceFirstResume * 0.01, 1),
                                          modelviewMatrix);
     self.baseEffect.transform.modelviewMatrix = modelviewMatrix;
     
@@ -168,8 +193,14 @@ GLfloat quadVertices[12] =
                        attribOffset:0
                        shouldEnable:YES];
     
+    float moving = -6.0f + self.timeSinceFirstResume * 1.5;
+    
+    if(moving >= 0) {
+        moving = 0;
+    }
+    
     modelviewMatrix =
-    GLKMatrix4Multiply(GLKMatrix4MakeTranslation(0.0f, 0.0f, 0),
+    GLKMatrix4Multiply(GLKMatrix4MakeTranslation(moving, 0.0f, 0),
                        GLKMatrix4MakeRotation(0.0f, 0, 0, 1));
     
     self.quadEffect.transform.modelviewMatrix = modelviewMatrix;
@@ -179,6 +210,24 @@ GLfloat quadVertices[12] =
     [self.quadVertexArray drawArrayWithMode:GL_TRIANGLE_STRIP
                           startVertexIndex:0
                           numberOfVertices:4];
+    
+    
+    [self.textEffect prepareToDraw];
+    
+    [self.quadVertexArray prepareToDrawWithAttrib:GLKVertexAttribPosition
+                              numberOfCoordinates:3
+                                     attribOffset:0
+                                     shouldEnable:YES];
+    
+    
+    
+    self.textEffect.transform.modelviewMatrix = modelviewMatrix;
+    
+    // Draw triangles using the first three vertices in the
+    // currently bound vertex buffer
+    [self.quadVertexArray drawArrayWithMode:GL_TRIANGLE_STRIP
+                           startVertexIndex:0
+                           numberOfVertices:4];
     
     
 

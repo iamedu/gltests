@@ -16,6 +16,8 @@
 *baseEffect;
 @property (strong, nonatomic) GLKBaseEffect
 *quadEffect;
+@property (strong, nonatomic) GLKBaseEffect
+*textEffect;
 
 @property (strong, nonatomic) AGLKVertexAttribArrayBuffer
 *vertexBuffer;
