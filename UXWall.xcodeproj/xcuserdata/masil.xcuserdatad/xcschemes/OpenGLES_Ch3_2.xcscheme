@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0345CD7813F05ABA0089B01C"
                BuildableName = "OpenGLES_Ch3_2.app"
-               BlueprintName = "OpenGLES_Ch3_2"
-               ReferencedContainer = "container:OpenGLES_Ch3_2.xcodeproj">
+               BlueprintName = "UXWall"
+               ReferencedContainer = "container:UXWall.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0345CD7813F05ABA0089B01C"
             BuildableName = "OpenGLES_Ch3_2.app"
-            BlueprintName = "OpenGLES_Ch3_2"
-            ReferencedContainer = "container:OpenGLES_Ch3_2.xcodeproj">
+            BlueprintName = "UXWall"
+            ReferencedContainer = "container:UXWall.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0345CD7813F05ABA0089B01C"
             BuildableName = "OpenGLES_Ch3_2.app"
-            BlueprintName = "OpenGLES_Ch3_2"
-            ReferencedContainer = "container:OpenGLES_Ch3_2.xcodeproj">
+            BlueprintName = "UXWall"
+            ReferencedContainer = "container:UXWall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0345CD7813F05ABA0089B01C"
             BuildableName = "OpenGLES_Ch3_2.app"
-            BlueprintName = "OpenGLES_Ch3_2"
-            ReferencedContainer = "container:OpenGLES_Ch3_2.xcodeproj">
+            BlueprintName = "UXWall"
+            ReferencedContainer = "container:UXWall.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

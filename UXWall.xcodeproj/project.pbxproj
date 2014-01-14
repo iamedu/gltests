@@ -32,14 +32,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0345CD7913F05ABA0089B01C /* OpenGLES_Ch3_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLES_Ch3_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0345CD7913F05ABA0089B01C /* UXWall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UXWall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0345CD7D13F05ABA0089B01C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0345CD7F13F05ABA0089B01C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0345CD8113F05ABA0089B01C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0345CD8513F05ABA0089B01C /* OpenGLES_Ch3_2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenGLES_Ch3_2-Info.plist"; sourceTree = "<group>"; };
+		0345CD8513F05ABA0089B01C /* UXWall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UXWall-Info.plist"; sourceTree = "<group>"; };
 		0345CD8713F05ABA0089B01C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0345CD8913F05ABA0089B01C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0345CD8B13F05ABA0089B01C /* OpenGLES_Ch3_2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenGLES_Ch3_2-Prefix.pch"; sourceTree = "<group>"; };
+		0345CD8B13F05ABA0089B01C /* UXWall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UXWall-Prefix.pch"; sourceTree = "<group>"; };
 		0345CD8C13F05ABA0089B01C /* OpenGLES_Ch3_2AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Ch3_2AppDelegate.h; sourceTree = "<group>"; };
 		0345CD8D13F05ABA0089B01C /* OpenGLES_Ch3_2AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Ch3_2AppDelegate.m; sourceTree = "<group>"; };
 		0345CD9013F05ABA0089B01C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		0345CD7A13F05ABA0089B01C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0345CD7913F05ABA0089B01C /* OpenGLES_Ch3_2.app */,
+				0345CD7913F05ABA0089B01C /* UXWall.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 				03EC715D1641DB7100CAB35A /* OpenGL_ES_for_iOS_72x72.png */,
 				03EC715E1641DB7100CAB35A /* OpenGL_ES_for_iOS_114x114.png */,
 				036911CA13F05C0400B8EFE5 /* leaves.gif */,
-				0345CD8513F05ABA0089B01C /* OpenGLES_Ch3_2-Info.plist */,
+				0345CD8513F05ABA0089B01C /* UXWall-Info.plist */,
 				0345CD8613F05ABA0089B01C /* InfoPlist.strings */,
 				0345CD8913F05ABA0089B01C /* main.m */,
-				0345CD8B13F05ABA0089B01C /* OpenGLES_Ch3_2-Prefix.pch */,
+				0345CD8B13F05ABA0089B01C /* UXWall-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,9 +152,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0345CD7813F05ABA0089B01C /* OpenGLES_Ch3_2 */ = {
+		0345CD7813F05ABA0089B01C /* UXWall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0345CD9A13F05ABA0089B01C /* Build configuration list for PBXNativeTarget "OpenGLES_Ch3_2" */;
+			buildConfigurationList = 0345CD9A13F05ABA0089B01C /* Build configuration list for PBXNativeTarget "UXWall" */;
 			buildPhases = (
 				0345CD7513F05ABA0089B01C /* Sources */,
 				0345CD7613F05ABA0089B01C /* Frameworks */,
@@ -164,9 +164,9 @@
 			);
 			dependencies = (
 			);
-			name = OpenGLES_Ch3_2;
+			name = UXWall;
 			productName = OpenGLES_Ch3_2;
-			productReference = 0345CD7913F05ABA0089B01C /* OpenGLES_Ch3_2.app */;
+			productReference = 0345CD7913F05ABA0089B01C /* UXWall.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -177,7 +177,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 0345CD7313F05ABA0089B01C /* Build configuration list for PBXProject "OpenGLES_Ch3_2" */;
+			buildConfigurationList = 0345CD7313F05ABA0089B01C /* Build configuration list for PBXProject "UXWall" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,7 +189,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0345CD7813F05ABA0089B01C /* OpenGLES_Ch3_2 */,
+				0345CD7813F05ABA0089B01C /* UXWall */,
 			);
 		};
 /* End PBXProject section */
@@ -309,9 +309,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenGLES_Ch3_2/OpenGLES_Ch3_2-Prefix.pch";
-				INFOPLIST_FILE = "OpenGLES_Ch3_2/OpenGLES_Ch3_2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OpenGLES_Ch3_2/UXWall-Prefix.pch";
+				INFOPLIST_FILE = "OpenGLES_Ch3_2/UXWall-Info.plist";
+				PRODUCT_NAME = UXWall;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -320,9 +320,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OpenGLES_Ch3_2/OpenGLES_Ch3_2-Prefix.pch";
-				INFOPLIST_FILE = "OpenGLES_Ch3_2/OpenGLES_Ch3_2-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OpenGLES_Ch3_2/UXWall-Prefix.pch";
+				INFOPLIST_FILE = "OpenGLES_Ch3_2/UXWall-Info.plist";
+				PRODUCT_NAME = UXWall;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0345CD7313F05ABA0089B01C /* Build configuration list for PBXProject "OpenGLES_Ch3_2" */ = {
+		0345CD7313F05ABA0089B01C /* Build configuration list for PBXProject "UXWall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0345CD9813F05ABA0089B01C /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0345CD9A13F05ABA0089B01C /* Build configuration list for PBXNativeTarget "OpenGLES_Ch3_2" */ = {
+		0345CD9A13F05ABA0089B01C /* Build configuration list for PBXNativeTarget "UXWall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0345CD9B13F05ABA0089B01C /* Debug */,

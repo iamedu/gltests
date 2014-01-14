@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:OpenGLES_Ch3_2.xcodeproj">
+      location = "self:UXWall.xcodeproj">
    </FileRef>
 </Workspace>
