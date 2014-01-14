@@ -12,9 +12,14 @@
 {
 }
 
-@property (strong, nonatomic) GLKBaseEffect 
-   *baseEffect;
-@property (strong, nonatomic) AGLKVertexAttribArrayBuffer 
-   *vertexBuffer;
+@property (strong, nonatomic) GLKBaseEffect
+*baseEffect;
+@property (strong, nonatomic) GLKBaseEffect
+*quadEffect;
+
+@property (strong, nonatomic) AGLKVertexAttribArrayBuffer
+*vertexBuffer;
+@property (strong, nonatomic) AGLKVertexAttribArrayBuffer
+*quadVertexArray;
 
 @end

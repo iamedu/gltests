@@ -27,6 +27,7 @@
 		03EC71601641DB7100CAB35A /* OpenGL_ES_for_iOS_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EC715C1641DB7100CAB35A /* OpenGL_ES_for_iOS_57x57.png */; };
 		03EC71611641DB7100CAB35A /* OpenGL_ES_for_iOS_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EC715D1641DB7100CAB35A /* OpenGL_ES_for_iOS_72x72.png */; };
 		03EC71621641DB7100CAB35A /* OpenGL_ES_for_iOS_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 03EC715E1641DB7100CAB35A /* OpenGL_ES_for_iOS_114x114.png */; };
+		F04A95401884FCD9005502A3 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = F04A953F1884FCD9005502A3 /* image.png */; };
 		F095C8211884EA2000FB6101 /* who.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F095C8201884EA2000FB6101 /* who.jpg */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		03EC715C1641DB7100CAB35A /* OpenGL_ES_for_iOS_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OpenGL_ES_for_iOS_57x57.png; path = ../../../Resources/OpenGL_ES_for_iOS_57x57.png; sourceTree = "<group>"; };
 		03EC715D1641DB7100CAB35A /* OpenGL_ES_for_iOS_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OpenGL_ES_for_iOS_72x72.png; path = ../../../Resources/OpenGL_ES_for_iOS_72x72.png; sourceTree = "<group>"; };
 		03EC715E1641DB7100CAB35A /* OpenGL_ES_for_iOS_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OpenGL_ES_for_iOS_114x114.png; path = ../../../Resources/OpenGL_ES_for_iOS_114x114.png; sourceTree = "<group>"; };
+		F04A953F1884FCD9005502A3 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		F095C8201884EA2000FB6101 /* who.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = who.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 		0345CD8413F05ABA0089B01C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F04A953F1884FCD9005502A3 /* image.png */,
 				F095C8201884EA2000FB6101 /* who.jpg */,
 				03EC715B1641DB7100CAB35A /* Default-568h@2x.png */,
 				03EC715C1641DB7100CAB35A /* OpenGL_ES_for_iOS_57x57.png */,
@@ -205,6 +208,7 @@
 				03EC71601641DB7100CAB35A /* OpenGL_ES_for_iOS_57x57.png in Resources */,
 				03EC71611641DB7100CAB35A /* OpenGL_ES_for_iOS_72x72.png in Resources */,
 				03EC71621641DB7100CAB35A /* OpenGL_ES_for_iOS_114x114.png in Resources */,
+				F04A95401884FCD9005502A3 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
